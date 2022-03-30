@@ -1,7 +1,7 @@
 [
   {
     "name": "pomme",
-    "quantity": 60
+    "quantity": 700
   },
   {
     "name": "citron",
@@ -13,6 +13,6 @@
   },
   {
     "name": "orange",
-    "quantity": 30
+    "quantity": 50
   }
 ]

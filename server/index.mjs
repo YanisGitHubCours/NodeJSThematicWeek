@@ -8,7 +8,7 @@ const app = express()
 
 app.use(bodyparser.urlencoded({ extended: false }))
 app.use(bodyparser.json())
-app.use(morgan('combined'))
+app.use(morgan('tiny'))
 
 app.use(router)
 

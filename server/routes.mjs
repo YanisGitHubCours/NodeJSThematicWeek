@@ -29,7 +29,7 @@ router.delete('/products/:name', (req, res) => {
         quantity = req.query.quantity
         const check = remove(name, quantity)
         if (check) {
-            res.send(remove(name, quantity))
+            res.send("delete success")
         } else {
             res.send("check name or quantity")
         }
