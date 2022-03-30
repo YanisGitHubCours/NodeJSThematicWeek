@@ -1,0 +1,22 @@
+{
+  "name": "esgi---formation-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server/index.mjs --ignore server/products.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yanis",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
