@@ -1,0 +1,17 @@
+###
+GET http://localhost:3009/products
+
+###
+GET http://localhost:3009/
+
+###
+GET http://localhost:3009/products/pomme
+
+###
+POST http://localhost:3009/products HTTP/1.1
+content-type: application/json
+
+{
+    "name": "orange",
+    "quantity": 10
+}
