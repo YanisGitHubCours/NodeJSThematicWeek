@@ -1,5 +1,5 @@
 import express from "express"
-import {add, getAll, getByName} from "./products.mjs"
+import { add, getAll, getByName, remove } from "./products.mjs"
 
 const router = express.Router()
 
@@ -7,19 +7,38 @@ router.get('/', (req, res) => {
     res.send('/products/name => un produit spé & /products => tout les produits')
 })
 
-router.get('/products', (req,res) => {
+router.get('/products', (req, res) => {
     res.send(getAll())
 })
 
-router.get('/products/:name',(req,res) => {
+router.get('/products/:name', (req, res) => {
     const name = req.params.name
     res.send(getByName(req.params.name))
 })
 
-router.post('/products',(req,res) => {
-    const {name, quantity} = req.body
-    add(name,quantity)
+router.post('/products', (req, res) => {
+    const { name, quantity } = req.body
+    add(name, quantity)
     res.send("ajout ok")
+})
+
+router.delete('/products/:name', (req, res) => {
+    let quantity = 0
+    const name = req.params.name
+    if (req.query.quantity) {
+        quantity = req.query.quantity
+        const check = remove(name, quantity)
+        if (check) {
+            res.send(remove(name, quantity))
+        } else {
+            res.send("check name or quantity")
+        }
+    }
+    else {
+        res.send("cant delete without quantity")
+    }
+
+
 })
 
 export default router

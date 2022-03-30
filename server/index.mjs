@@ -1,10 +1,13 @@
 import router from "./routes.mjs"
 import express from "express"
+import bodyparser from "body-parser";
 
-const port = 3009;
+const port = 3000;
 const app = express()
 
-app.use(express.json({extended:false}))
+app.use(bodyparser.urlencoded({ extended: false }))
+app.use(bodyparser.json())
+
 app.use(router)
 
 app.listen(port, () => {
