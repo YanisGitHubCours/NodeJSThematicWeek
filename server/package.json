@@ -8,7 +8,7 @@
     "dev": "nodemon index.mjs --ignore products.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Yanis",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
