@@ -2,5 +2,9 @@
   {
     "name": "orange",
     "quantity": 20
+  },
+  {
+    "name": "pomme",
+    "quantity": 15
   }
 ]
