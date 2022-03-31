@@ -1,4 +1,6 @@
 // DOC for IIFE: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+//DOC for Axios: https://axios-http.com/docs/example
+// DOC Async function: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 
 import axios from "axios"
 
