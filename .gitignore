@@ -1,5 +1,5 @@
 # Dependency directories
-client/node-modules/ server/node-modules/ 
+node_modules node_modules/ 
 
 
 # Optional npm cache directory
