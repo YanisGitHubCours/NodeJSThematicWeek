@@ -1,2 +1,0 @@
-Build a client for use my nodejs API
-Coming soon
