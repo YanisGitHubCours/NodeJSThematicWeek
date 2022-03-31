@@ -18,8 +18,7 @@ router.get('/products/:name', (req, res) => {
 
 router.post('/products', (req, res) => {
     const { name, quantity } = req.body
-    add(name, quantity)
-    res.send("ajout ok")
+    res.send(add(name, quantity))
 })
 
 router.delete('/products/:name', (req, res) => {

@@ -5,23 +5,32 @@
 import axios from "axios"
 
 const getProducts = () => {
-    axios.get('http://localhost:3011/products')
-        .then((response) => {
-            console.log(response.data);
-            console.log(response.status);
-        });
-};
+    setTimeout(() => {
+        return new Promise((resolve, reject) => {
+            axios.get('http://localhost:3011/products')
+                .then((response) => {
+                    console.log(response.data)
+                    resolve(response);
+                });
 
-const addProduct = () => {
-    axios.post('http://localhost:3011/products', {
-        name: 'pomme',
-        quantity: 5
-    })
-        .then((response) => {
-            console.log(response);
-        }, (error) => {
-            console.log(error);
         });
+    }, 1000)
+}
+
+const addProduct = (name, quantity) => {
+    setTimeout(() => {
+        axios.post('http://localhost:3011/products', {
+            name: name,
+            quantity: quantity
+        })
+            .then((response) => {
+                //console.log(quantity + " " + name + " ajout(é)(s)");
+                console.log(response.data)
+                return response
+            }, (error) => {
+                return error;
+            });
+    }, 2000)
 }
 
 const getProductsAsync = () => {
@@ -31,19 +40,15 @@ const getProductsAsync = () => {
                 .then((response) => {
                     resolve(response.data);
                 });
-        }, 2000);
+        }, 3000);
     });
 }
 
 
-//IIFE
-(() => {
-    getProducts();
-    addProduct();
-})();
-
-//ASYNC IIFE
+//IIFE ASYNC
 (async () => {
+    getProducts();
+    addProduct("pomme", 15);
     const res = await getProductsAsync();
     console.log(res)
 })();
