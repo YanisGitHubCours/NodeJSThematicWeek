@@ -11,3 +11,9 @@ Open a other terminal and open the client folder & execute the command: node ind
 # For run the test:
 ***
 Go to the test folder and execute the command: npm run test
+
+# For run eslint:
+***
+Go to the server folder and execute the command: npm run eslint
+***
+if you want fix the error, execute the command: npm run eslint:fix
