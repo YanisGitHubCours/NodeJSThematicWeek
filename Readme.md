@@ -17,3 +17,7 @@ Go to the test folder and execute the command: npm run test
 Go to the server folder and execute the command: npm run lint
 ***
 if you want fix the error, execute the command: npm run lint:fix
+
+# For check Swagger doc:
+***
+Start the server and go to: http://localhost:3000/api-docs/
