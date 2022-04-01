@@ -1,5 +1,6 @@
 import express from 'express'
 import { add, getAll, getByName, remove } from './products.mjs'
+import { auth } from './auth/index.mjs'
 
 const router = express.Router()
 
@@ -34,6 +35,11 @@ router.delete('/products/:name', (req, res) => {
     } else {
         res.send('cant delete without quantity')
     }
+})
+
+router.post('/auth', (req, res) => {
+    const { name, password } = req.body
+    res.send(auth(name, password))
 })
 
 export default router
