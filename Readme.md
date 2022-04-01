@@ -14,6 +14,6 @@ Go to the test folder and execute the command: npm run test
 
 # For run eslint:
 ***
-Go to the server folder and execute the command: npm run eslint
+Go to the server folder and execute the command: npm run lint
 ***
-if you want fix the error, execute the command: npm run eslint:fix
+if you want fix the error, execute the command: npm run lint:fix
