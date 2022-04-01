@@ -17,6 +17,6 @@ content-type: application/json
 }
 
 ###
-DELETE http://localhost:3000/products/pomme?quantity=500 HTTP/1.1
+DELETE http://localhost:3002/products/pomme?quantity=5 HTTP/1.1
 
 

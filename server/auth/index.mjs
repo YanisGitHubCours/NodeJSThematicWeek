@@ -16,10 +16,4 @@ const auth = (name, password) => {
     return generatedAccessToken(user)
 }
 
-const WHITE_ROUTE = ['/auth']
-const authToken = (req, res, next) => {
-
-
-}
-
-export { auth, authToken }
+export { auth }
