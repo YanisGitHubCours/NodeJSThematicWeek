@@ -1,5 +1,5 @@
 # Dependency directories
-node_modules node_modules/ 
+node_modules node_modules/ package-lock.json
 
 
 # Optional npm cache directory
